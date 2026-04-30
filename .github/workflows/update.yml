@@ -1,0 +1,28 @@
+name: SKZ Auto Ranker
+on:
+  schedule:
+    - cron: "0 */12 * * *" # This means every 12 hours
+  workflow_dispatch:      # This allows you to run it manually to test it
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Allows GitHub to save the data back to your repo
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install tools
+        run: pip install -r requirements.txt
+      - name: Run the script
+        run: python skz_ranker.py
+      - name: Save updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add skz_data.json
+          git commit -m "Updated SKZ Rankings" || exit 0
+          git push
