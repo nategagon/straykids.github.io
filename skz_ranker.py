@@ -2,43 +2,51 @@ import requests
 import json
 from datetime import datetime, timedelta
 
-# The members and their Wikipedia unique IDs for tracking interest
+# All 8 members have official Instagram handles as of 2026
 MEMBERS = {
-    "Bang Chan": "Bang_Chan",
-    "Lee Know": "Lee_Know",
-    "Changbin": "Changbin",
-    "Hyunjin": "Hyunjin",
-    "Han": "Han_Jisung",
-    "Felix": "Felix_(rapper)",
-    "Seungmin": "Seungmin",
-    "I.N": "I.N_(singer)"
+    "Bang Chan": {"wiki": "Bang_Chan", "ig": "gnabnahc"},
+    "Lee Know": {"wiki": "Lee_Know", "ig": "t.leeknow"},
+    "Changbin": {"wiki": "Changbin", "ig": "jutdwae"},
+    "Hyunjin": {"wiki": "Hyunjin", "ig": "hynjinnnn"},
+    "Han": {"wiki": "Han_Jisung", "ig": "_hey_stay_"},
+    "Felix": {"wiki": "Felix_(rapper)", "ig": "yong.lixx"},
+    "Seungmin": {"wiki": "Seungmin", "ig": "miniverse.___"},
+    "I.N": {"wiki": "I.N_(singer)", "ig": "i.2.n.8"}
 }
 
-def get_stats():
-    # Get yesterday's date
+def get_data():
     date_str = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
     headers = {'User-Agent': 'SKZ-Ranker-App/1.0'}
-    results = []
+    final_list = []
 
-    for name, wiki_id in MEMBERS.items():
-        url = f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/{wiki_id}/daily/{date_str}/{date_str}"
+    for name, info in MEMBERS.items():
+        # 1. Get Wikipedia Pageviews (Curiosity Metric)
+        wiki_url = f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/{info['wiki']}/daily/{date_str}/{date_str}"
         try:
-            response = requests.get(url, headers=headers).json()
-            views = response['items'][0]['views']
+            wiki_views = requests.get(wiki_url, headers=headers).json()['items'][0]['views']
         except:
-            views = 0
-            
-        results.append({
+            wiki_views = 0
+
+        # 2. Assign a 'Base Power' score 
+        # (This combines their Wiki views with a steady growth factor)
+        score = wiki_views + 1000 
+
+        final_list.append({
             "name": name,
-            "popularity_score": views,
-            "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "ig_handle": info['ig'],
+            "score": score,
+            "daily_views": wiki_views,
+            "last_update": datetime.now().strftime("%B %d, %Y")
         })
 
-    # Sort from #1 to #8 based on views
-    return sorted(results, key=lambda x: x['popularity_score'], reverse=True)
+    # Sort from #1 to #8
+    return sorted(final_list, key=lambda x: x['score'], reverse=True)
 
 if __name__ == "__main__":
-    data = get_stats()
+    ranked_data = get_data()
+    # Add ranking numbers 1-8
+    for i, member in enumerate(ranked_data):
+        member['rank'] = i + 1
+        
     with open('skz_data.json', 'w') as f:
-        json.dump(data, f, indent=4)
-    print("Rankings updated!")
+        json.dump(ranked_data, f, indent=4)
