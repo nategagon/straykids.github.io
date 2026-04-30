@@ -90,15 +90,20 @@
                 container.innerHTML = ''; // Clear the loading message
 
                 data.forEach((member) => {
-                    const row = document.createElement('div');
-                    row.className = 'member-row';
-                    row.innerHTML = `
-                        <div class="rank">#${member.rank}</div>
-                        <div class="name">${member.name}</div>
-                        <div class="score">${member.score.toLocaleString()} points</div>
-                    `;
-                    container.appendChild(row);
-                });
+    const row = document.createElement('div');
+    row.className = 'member-row';
+    
+    // Safety Shield: (member.score || 0) ensures it never reads "undefined"
+    const displayScore = (member.score || 0).toLocaleString();
+    const displayRank = member.rank || "?";
+
+    row.innerHTML = `
+        <div class="rank">#${displayRank}</div>
+        <div class="name">${member.name}</div>
+        <div class="score">${displayScore} points</div>
+    `;
+    container.appendChild(row);
+});
 
                 if (data.length > 0) {
                     timeFooter.innerText = "Last Synchronized: " + data[0].last_update;
