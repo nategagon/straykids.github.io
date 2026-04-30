@@ -81,7 +81,7 @@
             try {
                 // We add a random number to the URL to make sure 
                 // the browser doesn't show an "old" version (Cache Busting)
-                const response = await fetch('skz_data.json?t=' + Date.now());
+                const response = await fetch('./skz_data.json?t=' + Date.now());
                 const data = await response.json();
                 
                 const container = document.getElementById('ranking-container');
