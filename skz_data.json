@@ -1,42 +1,50 @@
 [
     {
+        "name": "Felix",
+        "score": 1220,
+        "updated_at": "April 30, 2026",
+        "rank": 1
+    },
+    {
         "name": "Bang Chan",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:48"
+        "score": 1085,
+        "updated_at": "April 30, 2026",
+        "rank": 2
     },
     {
         "name": "Lee Know",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:48"
-    },
-    {
-        "name": "Changbin",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:48"
-    },
-    {
-        "name": "Hyunjin",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:48"
-    },
-    {
-        "name": "Han",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:48"
-    },
-    {
-        "name": "Felix",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:49"
+        "score": 601,
+        "updated_at": "April 30, 2026",
+        "rank": 3
     },
     {
         "name": "Seungmin",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:49"
+        "score": 461,
+        "updated_at": "April 30, 2026",
+        "rank": 4
+    },
+    {
+        "name": "Changbin",
+        "score": 418,
+        "updated_at": "April 30, 2026",
+        "rank": 5
+    },
+    {
+        "name": "Hyunjin",
+        "score": 116,
+        "updated_at": "April 30, 2026",
+        "rank": 6
+    },
+    {
+        "name": "Han",
+        "score": 106,
+        "updated_at": "April 30, 2026",
+        "rank": 7
     },
     {
         "name": "I.N",
-        "popularity_score": 0,
-        "updated_at": "2026-04-30 02:53:49"
+        "score": 100,
+        "updated_at": "April 30, 2026",
+        "rank": 8
     }
 ]
