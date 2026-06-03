@@ -1,50 +1,50 @@
 [
     {
         "name": "Felix",
-        "score": 1188,
-        "updated_at": "June 02, 2026",
+        "score": 1202,
+        "updated_at": "June 03, 2026",
         "rank": 1
     },
     {
         "name": "Bang Chan",
-        "score": 1008,
-        "updated_at": "June 02, 2026",
+        "score": 1014,
+        "updated_at": "June 03, 2026",
         "rank": 2
     },
     {
         "name": "Lee Know",
-        "score": 568,
-        "updated_at": "June 02, 2026",
+        "score": 555,
+        "updated_at": "June 03, 2026",
         "rank": 3
     },
     {
         "name": "Seungmin",
-        "score": 434,
-        "updated_at": "June 02, 2026",
+        "score": 440,
+        "updated_at": "June 03, 2026",
         "rank": 4
     },
     {
         "name": "Changbin",
-        "score": 423,
-        "updated_at": "June 02, 2026",
+        "score": 409,
+        "updated_at": "June 03, 2026",
         "rank": 5
     },
     {
         "name": "Hyunjin",
-        "score": 110,
-        "updated_at": "June 02, 2026",
+        "score": 115,
+        "updated_at": "June 03, 2026",
         "rank": 6
     },
     {
         "name": "Han",
-        "score": 107,
-        "updated_at": "June 02, 2026",
+        "score": 101,
+        "updated_at": "June 03, 2026",
         "rank": 7
     },
     {
         "name": "I.N",
-        "score": 100,
-        "updated_at": "June 02, 2026",
+        "score": 101,
+        "updated_at": "June 03, 2026",
         "rank": 8
     }
 ]
