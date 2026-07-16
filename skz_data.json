@@ -18,32 +18,32 @@
         "rank": 3
     },
     {
-        "name": "Seungmin",
-        "score": 410,
-        "updated_at": "July 16, 2026",
-        "rank": 4
-    },
-    {
         "name": "Changbin",
         "score": 394,
         "updated_at": "July 16, 2026",
-        "rank": 5
+        "rank": 4
     },
     {
         "name": "Hyunjin",
         "score": 110,
         "updated_at": "July 16, 2026",
-        "rank": 6
+        "rank": 5
     },
     {
         "name": "Han",
         "score": 101,
         "updated_at": "July 16, 2026",
-        "rank": 7
+        "rank": 6
     },
     {
         "name": "I.N",
         "score": 101,
+        "updated_at": "July 16, 2026",
+        "rank": 7
+    },
+    {
+        "name": "Seungmin",
+        "score": 100,
         "updated_at": "July 16, 2026",
         "rank": 8
     }
