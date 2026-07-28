@@ -12,38 +12,38 @@
         "rank": 2
     },
     {
-        "name": "Lee Know",
-        "score": 880,
-        "updated_at": "July 28, 2026",
-        "rank": 3
-    },
-    {
         "name": "Changbin",
         "score": 734,
         "updated_at": "July 28, 2026",
-        "rank": 4
+        "rank": 3
     },
     {
         "name": "Seungmin",
         "score": 704,
         "updated_at": "July 28, 2026",
-        "rank": 5
+        "rank": 4
     },
     {
         "name": "Hyunjin",
         "score": 110,
         "updated_at": "July 28, 2026",
-        "rank": 6
+        "rank": 5
     },
     {
         "name": "Han",
         "score": 103,
         "updated_at": "July 28, 2026",
-        "rank": 7
+        "rank": 6
     },
     {
         "name": "I.N",
         "score": 102,
+        "updated_at": "July 28, 2026",
+        "rank": 7
+    },
+    {
+        "name": "Lee Know",
+        "score": 100,
         "updated_at": "July 28, 2026",
         "rank": 8
     }
