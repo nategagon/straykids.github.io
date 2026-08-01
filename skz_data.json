@@ -1,13 +1,13 @@
 [
     {
-        "name": "Bang Chan",
-        "score": 1033,
+        "name": "Felix",
+        "score": 1196,
         "updated_at": "August 01, 2026",
         "rank": 1
     },
     {
-        "name": "Lee Know",
-        "score": 654,
+        "name": "Bang Chan",
+        "score": 1033,
         "updated_at": "August 01, 2026",
         "rank": 2
     },
@@ -24,19 +24,19 @@
         "rank": 4
     },
     {
-        "name": "Hyunjin",
-        "score": 108,
+        "name": "Han",
+        "score": 104,
         "updated_at": "August 01, 2026",
         "rank": 5
     },
     {
-        "name": "Han",
-        "score": 104,
+        "name": "Lee Know",
+        "score": 100,
         "updated_at": "August 01, 2026",
         "rank": 6
     },
     {
-        "name": "Felix",
+        "name": "Hyunjin",
         "score": 100,
         "updated_at": "August 01, 2026",
         "rank": 7
